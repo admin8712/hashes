@@ -6,11 +6,7 @@ import hashlib,requests,json,os,sys,random,bcrypt
 import subprocess,time
 from time import sleep
 os.system("clear")
-os.system("pip install lolcat")
-os.system("pip install bcrypt~=3.2.2")
-os.system("pip3 install bcrypt~=3.2.2")
-os.system("apt install figlet")
-os.system("clear")
+
 def loading():
   os.system("figlet Loading | lolcat")
   for _ in range(6):
