@@ -24,4 +24,10 @@ pip3 install bcrypt~=3.2.2
 
 
 
+
+
+
+
+
+
 Gunakan tools ini dengan bijak jangan di salah gunakan,kami tidak bertanggung jawab atas tindakan ilegal apapun dengan tools ini
