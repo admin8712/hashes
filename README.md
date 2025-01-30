@@ -1,8 +1,10 @@
+🛠️ Hashes
+
 <img src="https://c.top4top.io/p_3317hi8360.jpg" width="350" height="350" alt="Logo" >
 <table width="900" height="0" >
 
 
-🛠️ hashes
+
 TOOLS HASHES OPEN SOURCE POWER FULL
 
 ini adalah Tools decrypt online dan ofline md5 jugak bcrypt ,dan untuk ofline anda bisa memakai wordlist dan untuk yang online anda tidak perlu memakai wordlist karena sudah otomatis dan anda jugak bisa membuat hash md5 dan bcrypt di Tools ini
