@@ -70,8 +70,9 @@ while True:
           count +=1
           if count ==3:
             count=0
-
+        
         subprocess.call("python hash.py", shell=True)
+        exit()
         print("\n")
       if __name__=="__main__":
         main()
@@ -103,7 +104,7 @@ while True:
             os.system("clear")
             os.system("figlet Found | lolcat")
             print("\n\033[0;32m\033[1mpassword found : "+word)
-            quit()
+            exit()
             a+=1
         if a==0:
           print("\n\033[0;31m\033[1mpassword not found ")
@@ -126,7 +127,7 @@ while True:
           os.system("clear")
           os.system("figlet Found | lolcat")
           print("\n\033[0;32m\033[1mpassword found: "+session+"\n")
-          quit()
+          exit()
           print("\n")
 
         except Exception as ConnectionError:
@@ -134,6 +135,7 @@ while True:
           print("")
           time.sleep(1)
           subprocess.call("python hash.py",shell=True)
+          exit()
       if __name__=="__main__":
         online()
 #___________________________________________________________#
@@ -160,12 +162,13 @@ while True:
           os.system("figlet Found | lolcat")
           print(f"\n\033[32m\033[1mCrack berhasil periksa di gmail anda : {response}")
           print("")
-          quit()
+          exit()
         except Exception as ConnectionError:
           print("\n\033[0;31m\033[1mConnection Error !")
           print("")
         time.sleep(1)
         subprocess.call("python hash.py",shell=True)
+        exit()
       if __name__=="__main__":
         on( )
 #____________________________________________________________#
@@ -179,7 +182,7 @@ while True:
         os.system("clear")
         with open(file, 'r') as file:
           wordlist = file.read().splitlines()
-        hash = b"$2y$10$9o0PxCAeb1FcGRNS3E5rUunj0NW6omq1yIDl3Qt0ogBTJ2zxnD4Lm"#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
+        hash = b'$2b$12$aPnhQDQ2kTEr3RU4r8YzDeHofkQuWVvSgxQEudSvnVApCJWDupViy'#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
         for word in wordlist:
           os.system("clear")
           if bcrypt.checkpw(word.encode('utf-8'), hash):
@@ -190,7 +193,7 @@ while True:
             os.system("figlet Found | lolcat")
             print("")
             print("\033[0;32m\033[1mPassword found: "+word)
-            break
+            exit()
             print("")
             print("")
 
@@ -233,6 +236,7 @@ while True:
           print("")
           time.sleep(1)
           subprocess.call("python hash.py",shell=True)
+          exit()
       if __name__=="__main__":
         chek()
 #_____________________________________________________________#
@@ -262,6 +266,7 @@ while True:
           if count==3:
             count=0
         subprocess.call("python hash.py",shell=True)
+        exit()
       if __name__=="__main__":
         handex()
 
