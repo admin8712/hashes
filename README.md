@@ -1,5 +1,5 @@
 <img src="https://c.top4top.io/p_3317hi8360.jpg" width="700" height="700" alt="Logo" >
-<table width="800" height="0" >
+<table width="700" height="0" >
 
 
 🛠️ hashes
