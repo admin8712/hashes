@@ -54,7 +54,7 @@ while True:
       def main ():
         os.system("clear")
         os.system("figlet O F L I N E | lolcat")
-        msg=input("\n\033[36m\033[1mbuat hash md5 :")
+        msg=input("\n\033[36m\033[1mbuat hash md5: ")
         print("\n")
         hash=hashlib.md5()
         hash.update(msg.encode("utf-8"))
