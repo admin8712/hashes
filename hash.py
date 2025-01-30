@@ -1,33 +1,85 @@
-#UNTUK CRAK BCRYPT SILAHKAN CARI NOMOR 6 DAN GANTI HASH,
+#UNTUK CRACK BCRYPT SILAHKAN CARI NOMOR [5] DAN GANTI HASH,
 #PASSWORDNYA DENGAN PASSWORD BCRYPT KALIAN,
 #JANGAN LUPA KASIK b DBELAKANG CONTOH SEPERTI DI BAWAH
 # b"$2y$10$9o0PxCAeb1FcGRNS3E5rUunj0NW6omq1yIDl3Qt0ogBTJ2zxnD4Lm"
+#____________________ POWER FULL HASHES ____________________#
 import hashlib,requests,json,os,sys,random,bcrypt
 import subprocess,time
 from time import sleep
+from urllib.request import urlopen
+import re as r
 os.system("clear")
+try:
+    def getIP():
+      d = str(urlopen('http://checkip.dyndns.com/').read())
+      return r.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(d).group(1)
+      os.system("clear")
+    print("\n\033[0;36m\033[1m"+getIP())
+    os.system("clear")
+    print("")
+except Exception as ConnectionError:
+  print("")
+  print("\n\033[0;31m\033[1mConnection Error")
+  print("")
+  time.sleep(1)
+  exit()
 
 def loading():
-  os.system("figlet Loading | lolcat")
+  font="""\033[0;32m\033[1m
+┓     ┓• 
+┃┏┓┏┓┏┫┓┏┓┏┓
+┗┗┛┗┻┗┻┗┛┗┗┫   ©©©©©©©©©©
+           ┛
+
+  """
+  print(font)
   for _ in range(6):
-    sys.stdout.write("\r\033[36m\033[1mloading " + ["| ", "/ ", "- ", "\\ ", "| ", "/ "][_ % 6])
+    sys.stdout.write("\r\033[36m\033[1m"+["| ", "/ ", "- ", "\\ ", "| ", "/ "][_ % 6])
     sys.stdout.flush()
-    time.sleep(0.5)
+    time.sleep(2)
   print()
 while True:
   loading()
   os.system("clear")
 
 
-  print("🔴🟡🟢")
-  print("")
-  h=("from mrx_41 cyber indonesia")
-  print(f"\033[0;31m\rVersion 1.0.3 {h}")
-  os.system("figlet Hashes | lolcat")
+  #print("🔴🟡🟢")
+  try:
+    def getIP():
+      d = str(urlopen('http://checkip.dyndns.com/').read())
+      return r.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(d).group(1)
+      os.system("clear")
+    print("\n\033[0;31m\033[1m🔴🟡🟢                             "+getIP())
+    print("")
+  except Exception as ConnectionError:
+    print("")
+    print("\n\033[0;31m\033[1mConnection Error")
+    print("")
+    time.sleep(1)
+    exit()
+  #h=("from mrx_41 cyber indonesia")
+  print("\033[0;31m\033[1m🛠️ Version 1.0.3️")
+  def banner ():
+   font="""\033[0;32m\033[1m
+  
+  ██░ ██  ▄▄▄        ██████  ██░ ██ ▓█████   ██████ 
+ ▓██░ ██▒▒████▄    ▒██    ▒ ▓██░ ██▒▓█   ▀ ▒██    ▒ 
+ ▒██▀▀██░▒██  ▀█▄  ░ ▓██▄   ▒██▀▀██░▒███   ░ ▓██▄   
+ ░▓█ ░██ ░██▄▄▄▄██   ▒   ██▒░▓█ ░██ ▒▓█  ▄   ▒   ██▒
+ ░▓█▒░██▓ ▓█   ▓██▒▒██████▒▒░▓█▒░██▓░▒████▒▒██████▒▒
+  ▒ ░░▒░▒ ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░▒ ▒▓▒ ▒ ░
+  ▒ ░▒░ ░  ▒   ▒▒ ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░░ ░▒  ░ ░
+  ░  ░░ ░  ░   ▒   ░  ░  ░   ░  ░░ ░   ░   ░  ░  ░
+  ░  ░  ░      ░  ░      ░   ░  ░  ░   ░  ░      ░
+
+  """
+   print(font)
+  if __name__=="__main__":
+    banner()
   ader=("\033[36m\033[1m[2].Crack-md5 ofline ")
   adar=("\033[36m\033[1m[4].Crack-Md5 Online")
   ador=("\033[36m\033[1m[6].Check Tipe Hash ")
-  adir=("\033[36m\033[1m[8].Keluar")
+  adir=("\033[36m\033[1m[8].Edit Tools")
   print(f"\n\033[36m\033[1m[1].Buat-hash md5          {ader}")
   #print("\n\033[36m\033[1m[2].Crack-md5 ofline ")
   print(f"\n\033[36m\033[1m[3].Crack-md5 online       {adar}")
@@ -35,7 +87,7 @@ while True:
   print(f"\n\033[36m\033[1m[5].Crack-Bcrypt ofline    {ador}")
   #print("\n\033[36m\033[1m[6].Check Tipe Hash ")
   print(f"\n\033[36m\033[1m[7].Buat Bcrypt            {adir}")
-  #print("\n\033[36m\033[1m[8].Keluar")
+  print("\n\033[36m\033[1m[9].Keluar")
   ab=("1")
   ba=("2")
   do=("3")
@@ -43,24 +95,41 @@ while True:
   co=("5")
   ca=("6")
   cu=("7")
-  ci=("8")
+  du=("8")
+  ci=("9")
   def pilih():
     print("\n")
-    cd=input("\n\033[36m\033[1msilahkan pilih : ")
+    cd=input("\n\033[36m\033[1m🟢Silahkan pilih : ")
     print("\n")
 #___________________________________________________________#
-#.1
+#.[1]
     if cd==ab:
       def main ():
         os.system("clear")
-        os.system("figlet O F L I N E | lolcat")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┏┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┣   ┃   ┃  ┃┃  ┣
+┗┛  ┻   ┗┛  ┻  ┛┗  ┗┛
+
+
+        """
+        print(font)
         msg=input("\n\033[36m\033[1mbuat hash md5: ")
         print("\n")
         hash=hashlib.md5()
         hash.update(msg.encode("utf-8"))
         print("\n")
         os.system("clear")
-        os.system("figlet Results | lolcat")
+        font="""\033[;32m\033[1m
+
+┏┳┓•      ┳┳┓ ┓┏━
+ ┃ ┓┏┓┏┓  ┃┃┃┏┫┗┓
+ ┻ ┗┣┛┗   ┛ ┗┗┻┗┛
+    ┛
+
+        """
+        print(font)
         print("\n\033[0;32m\033[1mResults : {}".format(hash.hexdigest()))
         print("")
         count=0
@@ -70,18 +139,26 @@ while True:
           count +=1
           if count ==3:
             count=0
-        
+
         subprocess.call("python hash.py", shell=True)
         exit()
         print("\n")
       if __name__=="__main__":
         main()
 #___________________________________________________________#
-#.2
+#.[2]
     if cd ==ba:
       def ofline():
         os.system("clear")
-        os.system("figlet O F L I N E | lolcat")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┏┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┣   ┃   ┃  ┃┃  ┣
+┗┛  ┻   ┗┛  ┻  ┛┗  ┗┛
+
+
+        """
+        print(font)
         a=0
         print("\n")
         md=input("\n\033[36m\033[1mcrack-md5: ")
@@ -102,8 +179,17 @@ while True:
           if xd==md:
             print("\n")
             os.system("clear")
-            os.system("figlet Found | lolcat")
+            font="""\033[0;32m\033[1m
+
+┏┓            ┓  ┏┓       ┓
+┃┃┏┓┏┏┓┏┏┏┓┏┓┏┫  ┣ ┏┓┓┏┏┓┏┫
+┣┛┗┻┛┛┗┻┛┗┛┛ ┗┻  ┻ ┗┛┗┻┛┗┗┻
+
+
+            """
+            print(font)
             print("\n\033[0;32m\033[1mpassword found : "+word)
+            print("")
             exit()
             a+=1
         if a==0:
@@ -112,11 +198,19 @@ while True:
       if __name__=="__main__":
         ofline ( )
 #___________________________________________________________#
-#.3
+#.[3]
     if cd==do:
       def online():
         os.system("clear")
-        os.system("figlet O N L I N E | lolcat")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┳┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┃┃  ┃   ┃  ┃┃  ┣
+┗┛  ┛┗  ┗┛  ┻  ┛┗  ┗┛
+
+
+        """
+        print(font)
         print("\n")
         try:
           md5=input("\n\033[36m\033[1mCrack-Md5: ")
@@ -125,8 +219,17 @@ while True:
           session=requests.post(url=url_api).text
           print("\n")
           os.system("clear")
-          os.system("figlet Found | lolcat")
+          font="""\033[0;32m\033[1m
+
+┏┓            ┓  ┏┓       ┓
+┃┃┏┓┏┏┓┏┏┏┓┏┓┏┫  ┣ ┏┓┓┏┏┓┏┫
+┣┛┗┻┛┛┗┻┛┗┛┛ ┗┻  ┻ ┗┛┗┻┛┗┗┻
+
+
+          """
+          print(font)
           print("\n\033[0;32m\033[1mpassword found: "+session+"\n")
+          print("")
           exit()
           print("\n")
 
@@ -139,11 +242,19 @@ while True:
       if __name__=="__main__":
         online()
 #___________________________________________________________#
-#.4
+#.[4]
     if cd==di:
       def on():
         os.system("clear")
-        os.system("figlet O N L I N E | lolcat")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┳┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┃┃  ┃   ┃  ┃┃  ┣
+┗┛  ┛┗  ┗┛  ┻  ┛┗  ┗┛
+
+
+        """
+        print(font)
         print("")
         try:
           pas=input("\n\033[36m\033[1mmasukan pasword : ")
@@ -159,7 +270,15 @@ while True:
           response = requests.post(url, json=data,headers=headers)
           print("")
           os.system("clear")
-          os.system("figlet Found | lolcat")
+          font="""\033[0;32m\033[1m
+
+┏┓            ┓  ┏┓       ┓
+┃┃┏┓┏┏┓┏┏┏┓┏┓┏┫  ┣ ┏┓┓┏┏┓┏┫
+┣┛┗┻┛┛┗┻┛┗┛┛ ┗┻  ┻ ┗┛┗┻┛┗┗┻
+
+
+          """
+          print(font)
           print(f"\n\033[32m\033[1mCrack berhasil periksa di gmail anda : {response}")
           print("")
           exit()
@@ -175,14 +294,22 @@ while True:
 #.[5]
     if cd==co:
       os.system("clear")
-      os.system("figlet Bcrypt | lolcat")
+      font="""\033[0;32m\033[1m
+
+┏┓  ┏┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┣   ┃   ┃  ┃┃  ┣
+┗┛  ┻   ┗┛  ┻  ┛┗  ┗┛
+
+
+      """
+      print(font)
       print("")
       def main():
         file=input("\n\033[36m\033[1mFile : ")
         os.system("clear")
         with open(file, 'r') as file:
           wordlist = file.read().splitlines()
-        hash = b'$2b$12$aPnhQDQ2kTEr3RU4r8YzDeHofkQuWVvSgxQEudSvnVApCJWDupViy'#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
+        hash = b'$2b$12$9Vd35vwzyjkuq3WctC7esufgFuzf3Vxy0DmOcBPpzt2DOnf96dw8C'#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
         for word in wordlist:
           os.system("clear")
           if bcrypt.checkpw(word.encode('utf-8'), hash):
@@ -190,9 +317,17 @@ while True:
             print(a)
             os.system("clear")
             print("")
-            os.system("figlet Found | lolcat")
-            print("")
+            font="""\033[0;32m\033[1m
+
+┏┓            ┓  ┏┓       ┓
+┃┃┏┓┏┏┓┏┏┏┓┏┓┏┫  ┣ ┏┓┓┏┏┓┏┫
+┣┛┗┻┛┛┗┻┛┗┛┛ ┗┻  ┻ ┗┛┗┻┛┗┗┻
+
+
+            """
+            print(font)
             print("\033[0;32m\033[1mPassword found: "+word)
+            print("")
             exit()
             print("")
             print("")
@@ -221,10 +356,28 @@ while True:
       def chek():
         try:
           os.system("clear")
-          os.system("figlet Chek Hash | lolcat")
+          font="""\033[0;32m\033[1m
+
+┏┓┓   ┓   ┏┳┓•      ┓┏   ┓
+┃ ┣┓┏┓┃┏   ┃ ┓┏┓┏┓  ┣┫┏┓┏┣┓
+┗┛┛┗┗ ┛┗   ┻ ┗┣┛┗   ┛┗┗┻┛┛┗
+              ┛
+
+          """
+          print(font)
           hash=input("\n\033[36m\033[1mmasukan hash : ")
+          os.system("clear")
           url=(f"https://hashes.com/en/api/identifier?hash={hash}")
           req=requests.post(url=url).text
+          font="""\033[0;32m\033[1m
+
+┏┳┓•      ┓┏   ┓
+ ┃ ┓┏┓┏┓  ┣┫┏┓┏┣┓
+ ┻ ┗┣┛┗   ┛┗┗┻┛┛┗
+    ┛
+
+          """
+          print(font)
           print("\033[0;32m\033[1m"+req)
           print("\n\033[0;32m\033[1mtipe hash:                     ⬆️")
           print("\033[0;32m\033[1m_____________________________________")
@@ -245,8 +398,17 @@ while True:
       def handex():
         os.system("clear")
         # example password
-        os.system("figlet Bcrypt | lolcat")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┏┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┣   ┃   ┃  ┃┃  ┣
+┗┛  ┻   ┗┛  ┻  ┛┗  ┗┛
+
+
+        """
+        print(font)
         pas=input ("\n\033[36m\033[1mbuat pas bcrypt : ")
+        os.system("clear")
         print ("\n")
         password = pas
         # converting password to array of bytes
@@ -254,7 +416,16 @@ while True:
         # generating the salt
         salt = bcrypt.gensalt()
         # Hashing the password
-        hash = bcrypt.hashpw(bytes, salt) 
+        hash = bcrypt.hashpw(bytes, salt)
+        foont="""\033[0;32m\033[1m
+
+┏┳┓•      ┳┓
+ ┃ ┓┏┓┏┓  ┣┫┏┏┓┓┏┏┓╋
+ ┻ ┗┣┛┗   ┻┛┗┛ ┗┫┣┛┗
+    ┛           ┛┛
+
+        """
+        print(foont)
         print(f"\033[0;32m\033[1m{hash}")
         print("\n")
         count=0
@@ -269,9 +440,19 @@ while True:
         exit()
       if __name__=="__main__":
         handex()
-
-#____________________________________________________________#
+#___________________________________________________________#
 #.[8]
+    if cd==du:
+      def edit():
+        os.system("nano /data/data/com.termux/files/home/hashes/hash.py")
+
+        subprocess.call("python hash.py", shell=True)
+        exit()
+
+      if __name__=="__main__":
+        edit()
+#____________________________________________________________#
+#.[9]
     if cd==ci:
       def out():
         def mengetik(s):
@@ -292,3 +473,4 @@ while True:
 if __name__=="__loading__":
   loading ()
 
+ 
