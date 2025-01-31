@@ -3,6 +3,7 @@
 #JANGAN LUPA KASIK b DBELAKANG CONTOH SEPERTI DI BAWAH
 # b"$2y$10$9o0PxCAeb1FcGRNS3E5rUunj0NW6omq1yIDl3Qt0ogBTJ2zxnD4Lm"
 #____________________ POWER FULL HASHES ____________________#
+from itertools import product
 import hashlib,requests,json,os,sys,random,bcrypt
 import subprocess,time
 from time import sleep
@@ -80,6 +81,7 @@ while True:
   adar=("\033[36m\033[1m[4].Crack-Md5 Online")
   ador=("\033[36m\033[1m[6].Check Tipe Hash ")
   adir=("\033[36m\033[1m[8].Edit Tools")
+  adur=("\033[36m\033[1m[10].Exit")
   print(f"\n\033[36m\033[1m[1].Buat-hash md5          {ader}")
   #print("\n\033[36m\033[1m[2].Crack-md5 ofline ")
   print(f"\n\033[36m\033[1m[3].Crack-md5 online       {adar}")
@@ -87,7 +89,7 @@ while True:
   print(f"\n\033[36m\033[1m[5].Crack-Bcrypt ofline    {ador}")
   #print("\n\033[36m\033[1m[6].Check Tipe Hash ")
   print(f"\n\033[36m\033[1m[7].Buat Bcrypt            {adir}")
-  print("\n\033[36m\033[1m[9].Keluar")
+  print(f"\n\033[36m\033[1m[9].Crack Md5 Brute        {adur}")
   ab=("1")
   ba=("2")
   do=("3")
@@ -96,7 +98,8 @@ while True:
   ca=("6")
   cu=("7")
   du=("8")
-  ci=("9")
+  ni=("9")
+  ci=("10")
   def pilih():
     print("\n")
     cd=input("\n\033[36m\033[1m🟢Silahkan pilih : ")
@@ -309,7 +312,7 @@ while True:
         os.system("clear")
         with open(file, 'r') as file:
           wordlist = file.read().splitlines()
-        hash = b'$2b$12$9Vd35vwzyjkuq3WctC7esufgFuzf3Vxy0DmOcBPpzt2DOnf96dw8C'#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
+        hash = b'$2b$12$qd2YKzJAKWLFmRHLOzj4tufWaNl5S9Gqk4k.uLptxotB1tQtXvx1O'#<--GANTI DENGAN BCRYPT YANG ANDA INGIN CRACK
         for word in wordlist:
           os.system("clear")
           if bcrypt.checkpw(word.encode('utf-8'), hash):
@@ -453,6 +456,96 @@ while True:
         edit()
 #____________________________________________________________#
 #.[9]
+    if cd==ni:
+      def ofline():
+        os.system("clear")
+        font="""\033[0;32m\033[1m
+
+┏┓  ┏┓  ┓   ┳  ┳┓  ┏┓
+┃┃  ┣   ┃   ┃  ┃┃  ┣
+┗┛  ┻   ┗┛  ┻  ┛┗  ┗┛
+"""
+        print(font)
+        print("")
+        def computeMD5hash(string):
+          m=hashlib.md5()
+          m.update(string.encode("utf-8"))
+          return m.hexdigest()
+        try:
+          md5=input("\033[36m\033[1mmasukan hash: ")
+          print("")
+          max=int(input("\033[36m\033[1mJumlah Salt: ")) +1
+          print("")
+          chr="""
+        1):ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop           qrstuvwxyz1234567890
+        2):abcdefghijklmnopqrstuvwxyz1245667890\n
+        3):ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\n
+        4):1234567890\n
+        5):ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop           qrstuvwxyz\n
+        6):ABCDFFGHIJKLMNOPQRSTUVWXYZ\n
+        7):abcdefghijklmnopqrstuvwxyz\n
+        8):Custom\n
+         """
+          print(chr)
+          print("")
+          chr_num=int(input("\033[36m\033[1mpilih custom mana: "))
+          print("")
+          if chr_num == 1:
+            chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+          elif chr_num == 2:
+            chars="abcdefghijklmnopqrstuvwxyz1245667890"
+          elif chr_num == 3:
+            chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+          elif chr_num == 4:
+            chars="1234567890"
+          elif chr_num == 5:
+            chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+          elif chr_num == 6:
+            chars="ABCDFFGHIJKLMNOPQRSTUVWXYZ"
+          elif chr_num == 7:
+            chars="abcdefghijklmnopqrztuvwxyz"
+          elif chr_num == 8:
+            chars="Custom"
+            print("")
+            chars=input("\033[36m\033[1mIsi Sendiri: ")
+            print("")
+          found=0
+          lines=0
+          di=time.time()
+          for dini in range(1, max):
+            mencoba=product(chars, repeat=dini)
+            for hadi in mencoba:
+              crypt=computeMD5hash(''.join(hadi))
+              if crypt==md5:
+                print("")
+                os.system("clear")
+                font="""\033[0;32m\033[1m
+
+┏┓            ┓  ┏┓       ┓
+┃┃┏┓┏┏┓┏┏┏┓┏┓┏┫  ┣ ┏┓┓┏┏┓┏┫
+┣┛┗┻┛┛┗┻┛┗┛┛ ┗┻  ┻ ┗┛┗┻┛┗┗┻
+
+
+                """
+                print(font)
+                print("")
+                print("\033[0;32m\033[1mFound ➡ {} = {}\n".format(crypt, ''.join(hadi)))
+                print("")
+                do=time.time()
+                dn=do-di
+                print("\033[0;32m\033[1mselesai {} detik\ndengan {} total hashes".format(str(dn), str(lines)))
+                print("")
+                exit()
+                found=1
+              if found== 0:
+                print("\033[0;31m\033[1mcracked ➡ {} = {} ".format(crypt, ''.join(hadi)))
+        except KeyboardInterrupt:
+          print("\n Stooped at line: {}".format(str(lines)))
+      if __name__=="__main__":
+        ofline()
+
+#____________________________________________________________#
+#.[10]
     if cd==ci:
       def out():
         def mengetik(s):
