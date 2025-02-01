@@ -538,7 +538,7 @@ while True:
                 exit()
                 found=1
               if found== 0:
-                print("\033[0;31m\033[1mencari ➡ {} = {} ".format(crypt, ''.join(hadi)))
+                print("\033[0;31m\033[1mmencari ➡ {} = {} ".format(crypt, ''.join(hadi)))
         except KeyboardInterrupt:
           print("\n Stooped at line: {}".format(str(lines)))
       if __name__=="__main__":
